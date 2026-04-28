@@ -1,0 +1,13 @@
+{
+  "name": "ai-api-chat-demo",
+  "version": "1.0.0",
+  "description": "Multi-model CLI chat demo (Node.js)",
+  "type": "module",
+  "main": "chat.js",
+  "scripts": {
+    "start": "node chat.js"
+  },
+  "dependencies": {
+    "openai": "^4.50.0"
+  }
+}

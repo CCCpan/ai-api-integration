@@ -134,7 +134,20 @@ Selected entries; full list in [docs/modalities/text-models.md](docs/modalities/
 
 [Text](docs/modalities/text-models.md) · [Code](docs/modalities/code-generation.md) · [Image](docs/modalities/image-generation.md) · [Video](docs/modalities/video-generation.md) · [Audio](docs/modalities/audio.md) · [Vision](docs/modalities/vision.md) · [Embeddings](docs/modalities/embeddings.md)
 
+## Full demo
+
+[src/](src/) contains a **multi-model CLI chat tool** implemented in Python, Node.js, and Go — same functionality, three languages:
+
+- Type a message → streamed reply
+- `/model gpt-5` to switch models on the fly
+- `/image a sunset over mountains` to generate via `gpt-image-2`
+- Multi-turn history
+
+See [src/README.md](src/README.md) for details.
+
 ## Code examples
+
+Standalone snippets (chat, streaming, function calling, image generation, vision):
 
 | Language | Coverage | Path |
 |---|---|---|

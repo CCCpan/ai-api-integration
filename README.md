@@ -134,7 +134,20 @@ curl http://xdhdancer.top/v1/chat/completions \
 
 [文本对话](docs/modalities/text-models.md) · [代码生成](docs/modalities/code-generation.md) · [图片生成](docs/modalities/image-generation.md) · [视频生成](docs/modalities/video-generation.md) · [音频 / 音乐](docs/modalities/audio.md) · [视觉理解](docs/modalities/vision.md) · [Embeddings](docs/modalities/embeddings.md)
 
+## 完整 Demo
+
+[src/](src/) 目录下有一个**多模型命令行对话工具**——同样的功能用 Python / Node.js / Go 三种语言各实现了一份：
+
+- 输入消息→流式回复
+- `/model gpt-5` 即时切换模型
+- `/image a sunset over mountains` 调用 `gpt-image-2` 生图
+- 多轮对话历史
+
+详见 [src/README.md](src/README.md)。
+
 ## 代码示例
+
+零散的功能片段（chat、streaming、function calling、图片生成、视觉理解等）：
 
 | 语言 | 内容 | 路径 |
 |---|---|---|
