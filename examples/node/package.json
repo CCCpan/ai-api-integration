@@ -1,0 +1,8 @@
+{
+  "name": "ai-api-integration-node-examples",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.50.0"
+  }
+}

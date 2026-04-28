@@ -1,0 +1,20 @@
+# secrets
+.env
+*.key
+api-key.txt
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node
+node_modules/
+*.log
+.DS_Store
+
+# editor
+.vscode/
+.idea/
+*.swp
