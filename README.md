@@ -8,6 +8,70 @@
 
 🇬🇧 [English](README_EN.md)
 
+## 🎬 实战案例
+
+下面两个真实业务系统都基于本仓库教程同一套 OpenAI 兼容协议跑出来的，所有调用走 `xdhdancer.top/v1` 网关。
+
+### 案例 1 · 合同信息核验机器人（微信龙虾）
+
+把合同图发进微信，**36 秒** 输出一张排版好的工商核验报告图——传统流程要 8-10 分钟切 5 个工具，全流程压缩到 1 句指令。
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<video src="https://github.com/CCCpan/ai-api-integration/raw/main/assets/cases/contract-verify.mp4" controls poster="assets/cases/contract-verify-cover.jpg" width="100%"></video>
+
+</td>
+<td valign="top">
+
+**技术栈拆解：**
+
+| 环节 | 用到的能力 |
+|---|---|
+| OCR 提取合同字段 | [视觉理解](docs/modalities/vision.md) |
+| 工商接口比对（差异检测、逐位核对） | Function Calling |
+| 输出报告图 | [图片生成](docs/modalities/image-generation.md) |
+| 多轮串起来 | [文本对话](docs/modalities/text-models.md) |
+
+**关键数据：** 8-10 分钟 → 36 秒（−90%）／ 5 工具 → 1 指令（−80%）
+
+</td>
+</tr>
+</table>
+
+### 案例 2 · 小红书自动化日更账号
+
+定时把直播 / 长视频转成图文笔记、自动发布。单账号已跑出 **14w+ 粉丝 / 13w+ 获赞 / 单条最高播放 160w+ / 一天涨粉 4w+** 的真实数据。
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+<video src="https://github.com/CCCpan/ai-api-integration/raw/main/assets/cases/xhs-content.mp4" controls poster="assets/cases/xhs-content-cover.jpg" width="100%"></video>
+
+</td>
+<td valign="top">
+
+**技术栈拆解：**
+
+| 环节 | 用到的能力 |
+|---|---|
+| 语音转写 | [音频](docs/modalities/audio.md) |
+| 长文本整理成稿件 | [文本对话](docs/modalities/text-models.md)（`claude-opus-4-7` / `gpt-5`） |
+| 自动出封面 / 配图 | [图片生成](docs/modalities/image-generation.md) |
+| 多账号定时调度 | Function Calling + Cron |
+
+**适用场景：** 日更账号 / MCN 批量生产 / 品牌内容矩阵 / 垂直知识沉淀
+
+</td>
+</tr>
+</table>
+
+> 看完案例想接入？继续往下看下面的接入教程；想了解完整商业实现细节，可联系平台 [xdhdancer.top](http://xdhdancer.top) 客服。
+
+---
+
 ## 项目背景
 
 国内开发者把 GPT-5、Claude Opus、Gemini 等海外大模型接入项目时，绕不开三件事：账号注册、付费方式、网络访问。直接对接每家厂商意味着要重复处理这三道关，且每家的 SDK、参数、计费体系都不一样。
